@@ -33,9 +33,9 @@ scanButton.addEventListener("click", async () => {
 
     try {
 
-        const response = await fetch(
-            `http://127.0.0.1:8000/scan?url=${encodeURIComponent(url)}`
-        );
+     const response = await fetch(
+    `https://threatlens-7fld.onrender.com/scan?url=${encodeURIComponent(url)}`
+);
 
         if (!response.ok) {
             throw new Error("ThreatLens server returned an error.");
