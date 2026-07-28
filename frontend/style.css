@@ -1,0 +1,274 @@
+/* ------------------------------
+   Global
+------------------------------ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#0b1120;
+    color:#e5e7eb;
+    min-height:100vh;
+}
+
+main{
+    max-width:950px;
+    margin:auto;
+    padding:50px 20px;
+    text-align:center;
+}
+
+h1{
+    font-size:42px;
+    margin-bottom:8px;
+    color:#ffffff;
+}
+
+.subtitle{
+    color:#9ca3af;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+/* ------------------------------
+   Scanner
+------------------------------ */
+
+.scanner{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+
+#urlInput{
+    width:550px;
+    max-width:100%;
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #374151;
+    background:#111827;
+    color:white;
+    font-size:16px;
+    outline:none;
+}
+
+#urlInput:focus{
+    border-color:#3b82f6;
+    box-shadow:0 0 10px rgba(59,130,246,.35);
+}
+
+#scanButton{
+    padding:15px 28px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.25s;
+}
+
+#scanButton:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+/* ------------------------------
+   Report
+------------------------------ */
+
+.report{
+    margin-top:30px;
+    background:#111827;
+    border:1px solid #374151;
+    border-radius:15px;
+    padding:30px;
+}
+
+.report h2{
+    margin-bottom:10px;
+}
+
+.scanned-url{
+    color:#9ca3af;
+    word-break:break-word;
+    margin-bottom:30px;
+}
+
+/* ------------------------------
+   Risk Circle
+------------------------------ */
+
+.risk-container{
+    display:flex;
+    justify-content:center;
+    margin:30px 0;
+}
+
+.risk-circle{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    border:12px solid;
+    transition:.3s;
+}
+
+.risk-circle.low{
+    color:#22c55e;
+    border-color:#22c55e;
+}
+
+.risk-circle.moderate{
+    color:#facc15;
+    border-color:#facc15;
+}
+
+.risk-circle.high{
+    color:#fb923c;
+    border-color:#fb923c;
+}
+
+.risk-circle.critical{
+    color:#ef4444;
+    border-color:#ef4444;
+}
+
+.risk-number{
+    font-size:42px;
+    font-weight:bold;
+}
+
+.risk-status{
+    margin-top:8px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+/* ------------------------------
+   Findings
+------------------------------ */
+
+.finding{
+    background:#1f2937;
+    border-left:5px solid #3b82f6;
+    border-radius:10px;
+    padding:18px;
+    margin:18px auto;
+    max-width:700px;
+    text-align:left;
+    transition:.2s;
+}
+
+.finding:hover{
+    transform:translateY(-3px);
+}
+
+.finding strong{
+    display:block;
+    color:white;
+    margin-bottom:8px;
+    font-size:17px;
+}
+
+.finding p{
+    color:#d1d5db;
+    line-height:1.6;
+}
+
+.finding small{
+    color:#9ca3af;
+}
+
+/* ------------------------------
+   Safe Message
+------------------------------ */
+
+.safe-message{
+    background:#064e3b;
+    color:#d1fae5;
+    padding:18px;
+    border-radius:10px;
+    max-width:700px;
+    margin:auto;
+}
+
+/* ------------------------------
+   Recommendation
+------------------------------ */
+
+.recommendation{
+    margin-top:30px;
+    background:#172554;
+    border-left:5px solid #3b82f6;
+    padding:20px;
+    border-radius:10px;
+    text-align:left;
+    line-height:1.7;
+}
+
+/* ------------------------------
+   Loading
+------------------------------ */
+
+.loading{
+    background:#111827;
+    padding:30px;
+    border-radius:12px;
+    border:1px solid #374151;
+}
+
+.loading p{
+    margin-top:10px;
+    color:#9ca3af;
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+.footer{
+    margin-top:50px;
+    color:#6b7280;
+    font-size:14px;
+}
+
+/* ------------------------------
+   Mobile
+------------------------------ */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:32px;
+    }
+
+    .scanner{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    #urlInput{
+        width:100%;
+    }
+
+    #scanButton{
+        width:100%;
+    }
+
+    .risk-circle{
+        width:150px;
+        height:150px;
+    }
+
+}
