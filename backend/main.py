@@ -1,9 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.scanners.brand_scanner import scan_brand
-from backend.scanners.url_scanner import scan_url
-from backend.engine.risk_engine import calculate_risk
-from backend.engine.rule_engine import apply_rules
+
+from scanners.url_scanner import scan_url
+from scanners.brand_scanner import scan_brand
+from engine.rule_engine import apply_rules
+from engine.risk_engine import calculate_risk
 
 app = FastAPI(title="ThreatLens API")
 
